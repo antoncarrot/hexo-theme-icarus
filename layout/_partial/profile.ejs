@@ -4,7 +4,7 @@
       <img id="avatar" src="<%= ( theme.gravatar ? gravatar(theme.email) : url_for(config.avatar)) %>">
       <h2 id="name"><%= config.author %></h2>
       <h3 id="title"><%= config.author_title %></h3>
-      <span id="location"><i class="fa fa-map-marker"></i><%= config.location %></span>
+      <% if(config.location) { %><span id="location"><i class="fa fa-map-marker"></i><%= config.location %></span><% } %>
       <a id="follow" href="<%= config.follow %>"><%= __('profile.follow') %></a>
     </div>
     <div class="article-info profile-block">
