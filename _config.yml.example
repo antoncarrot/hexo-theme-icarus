@@ -1,13 +1,11 @@
 # Logo
-logo: css/images/logo.png # Empty this to unset logo
+logo: # Empty this to unset logo
 
 # Header
 menu:
-  Home: .
-  Archives: archives
-  Categories: categories
-  Tags: tags
-  About: about
+  Архив: archives
+  Разделы: categories
+  Теги: tags
 
 # Content
 excerpt_link: Read More
@@ -30,10 +28,11 @@ thumbnail: true
 
 # Contacts
 contacts:
-  github: http://github.com/ppoffice/hexo-theme-icarus
-  twitter: '#'
-  facebook: '#'
-  dribbble: '#'
+  twitter: http://twitter.com/beardyshow
+  soundcloud: http://soundcloud.com/beardycast
+  youtube-play: https://www.youtube.com/user/BeardyCastTV
+  vk: http://vk.com/beardycast
+  apple: https://itunes.apple.com/ru/podcast/beardycast/id868222886
   rss: atom.xml
 
 # Links
@@ -41,7 +40,7 @@ links:
   Hexo: http://hexo.io
 
 # CDN
-cdn: useso #If your site loads slowly change it to "google" , because "useso" is slow out of China
+cdn: google #If your site loads slowly change it to "google" , because "useso" is slow out of China
 
 # Miscellaneous
 google_site_verification:
