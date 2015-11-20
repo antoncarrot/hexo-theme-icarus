@@ -18,10 +18,12 @@
     ds.type = 'text/javascript';ds.async = true;
     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
     ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
+    (document.getElementsByTagName('head')[0]
      || document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
 </script>
+<% } else if (config.muut_shortname){ %>
+<script src="//cdn.muut.com/1/moot.ru.min.js"></script>
 <% } %>
 
 <%- partial('cdn_after_footer') %>
