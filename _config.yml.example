@@ -3,12 +3,12 @@ logo: # Empty this to unset logo
 
 # Header
 menu:
-  Архив: archives
   Разделы: categories
-  Теги: tags
+  Архив: archives
+  О нас: about
 
 # Content
-excerpt_link: Read More
+excerpt_link: Читать еще
 fancybox: true
 
 # Profile
@@ -20,10 +20,8 @@ showlogo: false # whether to show the logo in the header
 sidebar: right # set to false if you don't want a sidebar
 widgets:
 - recent_posts
-- category
-- tag
-- tagcloud
-- archive
+- tags
+- links
 thumbnail: true
 
 # Contacts
@@ -37,7 +35,7 @@ contacts:
 
 # Links
 links:
-  Hexo: http://hexo.io
+  Libsyn: http://directory.libsyn.com/shows/view/id/beardycast
 
 # CDN
 cdn: google #If your site loads slowly change it to "google" , because "useso" is slow out of China
