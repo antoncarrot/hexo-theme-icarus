@@ -3,12 +3,12 @@ logo: # Empty this to unset logo
 
 # Header
 menu:
-  Разделы: categories
-  Архив: archives
+  Рубрики: categories
+  Архив статей: archives
   О нас: about
 
 # Content
-excerpt_link: Читать еще
+excerpt_link: Подробнее
 fancybox: true
 
 # Profile
@@ -19,8 +19,7 @@ showlogo: false # whether to show the logo in the header
 # Sidebar
 sidebar: right # set to false if you don't want a sidebar
 widgets:
-- recent_posts
-- tags
+- tag
 - links
 thumbnail: true
 
