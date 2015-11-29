@@ -5,9 +5,9 @@
   a, a:visited
     white-space: nowrap
     transition: 0.2s ease
-    color: color-default
+    color: color-gold-dark
   a:hover
-    color: color-link
+    color: color-gold-dark + #111
 
 $header-block
   height: logo-size
@@ -149,10 +149,11 @@ $nav-link
       position: absolute
       font: 13px font-icon
       font-family: 'FontAwesome'
+      color: color-gold-dark
       &:before
         content: '\f002'
       &:hover, &:focus
-        color: #777
+        color: color-gold-dark + #111
 
 .search-form-input
   width: 200px
