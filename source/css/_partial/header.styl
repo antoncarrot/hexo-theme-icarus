@@ -99,8 +99,11 @@ $nav-link
   line-height: logo-size !important
 
 .main-nav-link
+  color: color-default !important
   @extend $nav-link
   font-weight: 300
+  &:hover
+    color: color-gold-dark + #111 !important
 
 #sub-nav
   @media mq-normal
