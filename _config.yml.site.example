@@ -76,7 +76,10 @@ theme: icarus
 # duoshuo_shortname: hexo-theme-icarus
 
 # Muut
-muut_shortname: beardyshow
+# muut_shortname: beardyshow
+
+# cackle.me
+cackle_shortname: beardyshow
 
 feed:
   type: atom

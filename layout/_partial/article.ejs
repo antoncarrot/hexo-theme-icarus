@@ -33,12 +33,8 @@
     </div>
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('article.share') %></a>
-      <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('article.comments') %></a>
-      <% } else if (post.comments && config.duoshuo_shortname){ %>
-        <a href="<%- post.permalink %>#ds-thread" class="article-comment-link"><%= __('article.comments') %></a>
-      <% } else if (post.comments && config.muut_shortname){ %>
-        <a href="<%- post.permalink %>#muut_thread" class="article-comment-link"><%= __('article.comments') %></a>
+      <% if (post.comments && config.disqus_shortname || config.duoshuo_shortname || config.muut_shortname || config.cackle_shortname){ %>
+        <a href="<%- post.permalink %>#comments_thread" class="article-comment-link"><%= __('article.comments') %></a>
       <% } %>
       <%- partial('post/tag') %>
     </footer>
@@ -50,20 +46,26 @@
 
 <% if (!index && post.comments && config.disqus_shortname){ %>
 <section id="comments">
-  <div id="disqus_thread">
+  <div id="comments_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 <% } else if (!index && post.comments && config.duoshuo_shortname){ %>
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="<%- post.permalink %>" data-title="<%- post.title %>" data-url="<%- post.permalink %>">
+    <div id="comments_thread" class="ds-thread" data-thread-key="<%- post.permalink %>" data-title="<%- post.title %>" data-url="<%- post.permalink %>">
       <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by DuoShuo.</a></noscript>
-      </div>
+    </div>
   </section>
 <% } else if (!index && post.comments && config.muut_shortname){ %>
   <section id="comments">
-    <div id="muut_thread">
+    <div id="comments_thread">
       <a class="muut" href="https://muut.com/i/<%= config.muut_shortname %>/comments" type="dynamic"><%= config.muut_shortname %></a>
+    </div>
+  </section>
+<% } else if (!index && post.comments && config.cackle_shortname){ %>
+  <section id="comments">
+    <div id="comments_thread">
+      <div id="mc-container"></div>
     </div>
   </section>
 <% } %>
