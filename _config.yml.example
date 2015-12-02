@@ -8,7 +8,7 @@ menu:
   О нас: about
 
 # Content
-excerpt_link: Подробнее
+excerpt_link: Читать дальше
 fancybox: true
 
 # Profile
@@ -35,6 +35,7 @@ contacts:
 # Links
 links:
   Libsyn: http://directory.libsyn.com/shows/view/id/beardycast
+  Теория большой бороды: http://tbbt.beardycast.com
 
 # CDN
 cdn: google #If your site loads slowly change it to "google" , because "useso" is slow out of China
