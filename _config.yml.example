@@ -37,6 +37,8 @@ links:
   Libsyn: http://directory.libsyn.com/shows/view/id/beardycast
   Теория большой бороды: http://tbbt.beardycast.com
 
+adslink: ads
+
 # CDN
 cdn: google #If your site loads slowly change it to "google" , because "useso" is slow out of China
 
