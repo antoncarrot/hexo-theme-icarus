@@ -36,4 +36,8 @@
   <% if( theme.customstylesheet ){ %>
     <%- css('css/'+theme.customstylesheet) %>
   <% } %>
+  <% if( config.muut_shortname ){ %>
+    <link rel="stylesheet" href="//cdn.muut.com/1/moot.css" />
+    <link rel="stylesheet" href="//cdn.muut.com/1/plugin/thumb.css" />
+  <% } %>
 </head>
