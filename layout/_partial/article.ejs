@@ -62,6 +62,10 @@
       <a class="muut" href="/i/<%= config.muut_shortname %>/comments" type="dynamic"><%= config.muut_shortname %></a>
     </div>
   </section>
+<% } else if (index && config.muut_shortname){ %>
+  <div style="display: none;">
+    <a class="muut" href="/i/<%= config.muut_shortname %>/comments" type="dynamic"><%= config.muut_shortname %></a>
+  </div>
 <% } else if (!index && post.comments && config.cackle_shortname){ %>
   <section id="comments">
     <div id="comments_thread">
