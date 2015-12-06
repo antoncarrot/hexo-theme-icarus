@@ -40,7 +40,7 @@ links:
 adslink: ads
 
 # CDN
-cdn: google #If your site loads slowly change it to "google" , because "useso" is slow out of China
+cdn: #If your site loads slowly change it to "google" , because "useso" is slow out of China
 
 # Miscellaneous
 google_site_verification:

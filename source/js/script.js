@@ -103,4 +103,48 @@
     $(document).scrollTop(0);
   });
 
+  //back to top
+  $.fn.backTop = function(options) {
+    var backBtn = this;
+    var settings = $.extend({
+      'position' : 400,
+      'speed' : 500
+    }, options);
+      var position = settings['position'];
+      var speed = settings['speed'];
+
+      backBtn.css({
+          'right' : 40,
+          'bottom' : 40,
+          'position' : 'fixed',
+      });
+
+    $(document).scroll(function(){
+      var pos = $(window).scrollTop();
+      console.log(pos);
+
+      if(pos >= position){
+          backBtn.fadeIn(speed);
+      } else{
+          backBtn.fadeOut(speed);
+      }
+    });
+
+    backBtn.click(function(){
+      $("html, body").animate({
+          scrollTop:0
+      },
+      {
+          duration: 1200
+      });
+    });
+  }
+
+  $(document).ready( function() {
+    $('#backTop').backTop({
+      'position' : 400,
+      'speed' : 500,
+    });
+  });
+
 })(jQuery);
