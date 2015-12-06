@@ -37,13 +37,15 @@
         <a href="<%- post.permalink %>#comments_thread" class="article-comment-link"><%= __('article.comments') %></a>
       <% } %>
       <%- partial('post/tag') %>
-      <div style="width: 100%; margin-top: 10px; display: flex; justify-content: space-around; align-items: center;">
+      <!--
+      <div style="width: 100%; margin-top: 20px; display: flex; justify-content: space-around; align-items: center;">
         <a href="https://twitter.com/intent/tweet?text=<%- post.title %>&via=<%- theme.twitter %>&url=<%- post.permalink %>" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>
         <a href="http://vk.com/share.php?url=<%- post.permalink %>" class="fa fa-vk article-share-vk" target="_blank" title="Вконтакте"></a>
         <a href="http://plus.google.com/share?url=<%- post.permalink %>" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>
         <a href="https://www.facebook.com/sharer.php?u=<%- post.permalink %>" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>
         <a href="http://pinterest.com/pin/create/button/?url=<%- post.permalink %>" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>
       </div>
+      -->
     </footer>
   </div>
   <% if (!index){ %>
@@ -67,7 +69,6 @@
   <section id="comments">
     <div id="comments_thread">
       <a class="muut" href="/i/<%= config.muut_shortname %>/comments" type="dynamic"><%= config.muut_shortname %></a>
-      <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
       <script src="//cdn.muut.com/1/moot.ru.min.js"></script>
       <script src="//cdn.muut.com/1/plugin/thumb.js"></script>
     </div>
