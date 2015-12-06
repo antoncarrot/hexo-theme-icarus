@@ -60,11 +60,15 @@
   <section id="comments">
     <div id="comments_thread">
       <a class="muut" href="/i/<%= config.muut_shortname %>/comments" type="dynamic"><%= config.muut_shortname %></a>
+      <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+      <script src="//cdn.muut.com/1/moot.ru.min.js"></script>
+      <script src="//cdn.muut.com/1/plugin/thumb.js"></script>
     </div>
   </section>
 <% } else if (index && config.muut_shortname){ %>
   <div style="display: none;">
     <a class="muut" href="/i/<%= config.muut_shortname %>/comments" type="dynamic"><%= config.muut_shortname %></a>
+    <script src="//cdn.muut.com/1/moot.ru.min.js"></script>
   </div>
 <% } else if (!index && post.comments && config.cackle_shortname){ %>
   <section id="comments">
