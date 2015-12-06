@@ -32,7 +32,14 @@
       <% } %>
     </div>
     <footer class="article-footer">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('article.share') %></a>
+      <div style="width: 100%; margin-bottom: 20px; display: flex; justify-content: space-around; align-items: center;">
+        <a target="_blank" class="article-share-link">Поделиться:</a>
+        <a href="https://twitter.com/intent/tweet?text=<%- post.title %>&via=beardyshow&url=<%- post.permalink %>" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>
+        <a href="http://plus.google.com/share?url=<%- post.permalink %>" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>
+        <a href="https://www.facebook.com/sharer.php?u=<%- post.permalink %>" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>
+        <a href="http://pinterest.com/pin/create/button/?url=<%- post.permalink %>" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>
+      </div>
+      <!-- <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('article.share') %></a> -->
       <% if (post.comments && config.disqus_shortname || config.duoshuo_shortname || config.muut_shortname || config.cackle_shortname){ %>
         <a href="<%- post.permalink %>#comments_thread" class="article-comment-link"><%= __('article.comments') %></a>
       <% } %>
