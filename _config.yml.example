@@ -3,6 +3,7 @@ logo: # Empty this to unset logo
 
 # Header
 menu:
+  # Бородокаст: http://beardycast.com
   Рубрики: categories
   Архив статей: archives
   О нас: about
@@ -19,8 +20,8 @@ showlogo: false # whether to show the logo in the header
 # Sidebar
 sidebar: right # set to false if you don't want a sidebar
 widgets:
-- tag
 - links
+- tag
 thumbnail: true
 
 # Contacts
@@ -45,7 +46,7 @@ cdn: #If your site loads slowly change it to "google" , because "useso" is slow 
 # Miscellaneous
 google_site_verification:
 google_analytics:
-favicon: favicon.png
+favicon: /favicon.png
 twitter: beardyshow
 google_plus:
 fb_admins:
