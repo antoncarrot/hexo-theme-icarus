@@ -37,19 +37,22 @@
     </div>
     <footer class="article-footer">
       <!-- <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('article.share') %></a> -->
-      <% if (post.comments && config.disqus_shortname || config.duoshuo_shortname || config.muut_shortname || config.cackle_shortname){ %>
-        <a href="<%- post.permalink %>#comments_thread" class="article-comment-link"><%= __('article.comments') %></a>
-      <% } %>
-      <%- partial('post/tag') %>
-      <!--
-      <div style="width: 100%; margin-top: 20px; display: flex; justify-content: space-around; align-items: center;">
-        <a href="https://twitter.com/intent/tweet?text=<%- post.title %>&via=<%- theme.twitter %>&url=<%- post.permalink %>" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>
-        <a href="http://vk.com/share.php?url=<%- post.permalink %>" class="fa fa-vk article-share-vk" target="_blank" title="Вконтакте"></a>
-        <a href="http://plus.google.com/share?url=<%- post.permalink %>" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>
-        <a href="https://www.facebook.com/sharer.php?u=<%- post.permalink %>" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>
-        <a href="http://pinterest.com/pin/create/button/?url=<%- post.permalink %>" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>
+      <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+        <div class="likely likely-big">
+          <div class="twitter" data-url="<%- post.permalink %>" data-title="<%- post.title %>" data-via="<%- theme.twitter %>"></div>
+          <div class="vkontakte" data-url="<%- post.permalink %>" data-title="<%- post.title %>"></div>
+          <div class="facebook" data-url="<%- post.permalink %>" data-title="<%- post.title %>"></div>
+          <div class="gplus" data-url="<%- post.permalink %>" data-title="<%- post.title %>"></div>
+        </div>
+        <div>
+          <% if (post.comments && config.disqus_shortname || config.duoshuo_shortname || config.muut_shortname || config.cackle_shortname){ %>
+            <a href="<%- post.permalink %>#comments_thread" class="article-comment-link"><%= __('article.comments') %></a>
+          <% } %>
+        </div>
       </div>
-      -->
+      <div style="width: 100%; margin-top: 20px;">
+        <%- partial('post/tag') %>
+      </div>
     </footer>
   </div>
   <% if (!index){ %>
