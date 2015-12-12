@@ -8,7 +8,11 @@
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
         <div class="article-meta">
-          <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+          <!-- <%- partial('post/date', {class_name: 'article-date', date_format: null}) %> -->
+          <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <a href="/archives/<%- date(post.date, 'YYYY/MM') %>/"><time datetime="<%- date(post.date) %>" itemprop="datePublished"><%- date(post.date) %></time></a>
+          </div>
           <%- partial('post/category') %>
         </div>
       </header>
