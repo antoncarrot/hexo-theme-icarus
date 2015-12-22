@@ -6,7 +6,11 @@ menu:
   # Бородокаст: http://beardycast.com
   Рубрики: categories
   Архив статей: archives
-  О нас: about
+  О нас: about.html
+
+footermenu:
+  Контакты: contacts.html
+  # Реклама: ads.html
 
 # Content
 excerpt_link: Читать дальше
@@ -37,8 +41,6 @@ contacts:
 links:
   Libsyn: http://directory.libsyn.com/shows/view/id/beardycast
   Теория большой бороды: http://tbbt.beardycast.com
-
-adslink: ads
 
 # CDN
 cdn: #If your site loads slowly change it to "google" , because "useso" is slow out of China
