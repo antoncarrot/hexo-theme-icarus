@@ -5,8 +5,9 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; <% if (config.since && config.since != date(new Date(), 'YYYY')){ %><%= config.since %> - <% } %><%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      <% var n = 0 %>
       <% for (var i in theme.footermenu){ %>
-        <% if( i > 1 ) { %> | <% } %><a href="<%- url_for(theme.footermenu[i]) %>"><%= i %></a>
+        <% if( n > 1 ) { %> | <% } %><a href="<%- url_for(theme.footermenu[i]) %>"><%= i %></a><% n++ %>
       <% } %>
       <!-- Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a> -->
     </div>
