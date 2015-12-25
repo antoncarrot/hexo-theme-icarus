@@ -5,16 +5,10 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; <% if (config.since && config.since != date(new Date(), 'YYYY')){ %><%= config.since %> - <% } %><%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-<<<<<<< HEAD
       <% var num = 0 %>
       <% for (var i in theme.footermenu){ %>
         <% num++ %><% if ( num > 1 ){ %> | <% } %>
         <a href="<%- url_for(theme.footermenu[i]) %>"><%= i %></a>
-=======
-      <% var n = 0 %>
-      <% for (var i in theme.footermenu){ %>
-        <% if( n > 1 ) { %> | <% } %><a href="<%- url_for(theme.footermenu[i]) %>"><%= i %></a><% n++ %>
->>>>>>> 8e0177ecf5e8cf30d62645a79675c69e0d23fd87
       <% } %>
       <!-- Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a> -->
     </div>
