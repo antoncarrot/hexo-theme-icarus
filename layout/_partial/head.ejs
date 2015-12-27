@@ -40,8 +40,23 @@
     <link rel="stylesheet" href="//cdn.muut.com/1/moot.css" />
     <link rel="stylesheet" href="//cdn.muut.com/1/plugin/thumb.css" />
   <% } %>
+  <% if( config.spotim_shortname ){ %>
+    <script type="text/javascript">
+      !function(t,e,n){
+        function a(t){
+          var  a=e.createElement("script");a.type="text/javascript" ,a.async=!0,a.src=("https:"===e.location.protocol?"https":"http")+":"+n,(t||e.body||e.head).appendChild(a)
+        }
+        function o(){
+          var t=e.getElementsByTagName("script"),n=t[t.length-1];return n.parentNode
+        }
+      var p=o();t.spotId="sp_HlCauId2",t.parentElement=p,a(p)
+      }
+      (window.SPOTIM={},document,"//www.spot.im/launcher/bundle.js");
+    </script>
+  <% } %>
   <script src="/js/likely.js"></script>
   <link rel="stylesheet" href="/css/likely.css">
+
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="/js/jquery.scrolldepth.min.js"></script>
   <script>

@@ -45,8 +45,11 @@
           <div class="gplus" data-url="<%- post.permalink %>" data-title="<%- post.title %>"></div>
         </div>
         <div>
-          <% if (post.comments && config.disqus_shortname || config.duoshuo_shortname || config.muut_shortname || config.cackle_shortname){ %>
+          <% if (post.comments && config.disqus_shortname || config.duoshuo_shortname || config.muut_shortname || config.cackle_shortname || config.spotim_shortname){ %>
             <a href="<%- post.permalink %>#comments_thread" class="article-comment-link"><%= __('article.comments') %></a>
+            <% if (config.spotim_shortname){ %>
+              <span class="spot-im-replies-count" data-post-id="<%= post.layout %>-<%= post.slug %>"></span>
+            <% } %>
           <% } %>
         </div>
       </div>
@@ -89,6 +92,12 @@
   <section id="comments">
     <div id="comments_thread">
       <div id="mc-container"></div>
+    </div>
+  </section>
+<% } else if (!index && post.comments && config.spotim_shortname){ %>
+  <section id="comments">
+    <div id="comments_thread">
+      <div id="spot-im-frame-inpage" data-post-id="<%= post.layout %>-<%= post.slug %>"></div>
     </div>
   </section>
 <% } %>

@@ -81,6 +81,9 @@ muut_shortname: beardyshow
 # cackle.me
 # cackle_shortname: beardyshow
 
+# spot.im
+# spotim_shortname: beardyshow
+
 feed:
   type: atom
   path: atom.xml
