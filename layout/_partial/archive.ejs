@@ -70,6 +70,12 @@
     page.posts.each(function(post){ %>
       <%- partial('article', {post: post, index: true}) %>
     <% })
+    if (config.muut_shortname){ %>
+      <div style="display: none;">
+        <a class="muut" href="/i/<%= config.muut_shortname %>/comments" type="dynamic"><%= config.muut_shortname %></a>
+        <script src="//cdn.muut.com/1/moot.ru.min.js"></script>
+      </div>
+    <% }
     if (page.total > 1){ %>
       <nav id="page-nav">
         <%- paginator({
