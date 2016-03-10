@@ -1,27 +1,16 @@
 <% if (site.posts.length){ %>
+  <% var p = 0 %>
+  <% var r = 0 %>
   <div class="widget-wrap">
     <h3 class="widget-title"><%= __('widget.recommended') %></h3>
     <div class="widget">
       <ul id="recent-post" class="<%= (theme.thumbnail?'':'no-thumbnail') %>">
         <% site.posts.sort('date').each(function(post){ %>
-          <% if(post.recommended && page.total) { %>
-            <li>
-              <% if(theme.thumbnail == true) { %>
-              <div class="item-thumbnail">
-                <%- partial('../_partial/post/thumbnail.ejs', {post: post}) %>
-              </div>
-              <% } %>
-              <div class="item-inner">
-                <p class="item-category"><%- list_categories(post.categories, {show_count: false, depth:2, class: 'article-category', style: 'none', separator: '<i class="fa fa-angle-right"></i>'}) %></p>
-                <p class="item-title"><a href="<%- url_for((post.link?post.link:post.path)) %>" class="title"><%= post.title %></a></p>
-                <p class="item-date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
-              </div>
-            </li>
-          <% } %>
           <% if (url_for(post.path) + 'index.html' === url_for(path) && post.tags.length){ %>
             <% post.tags.sort('name').each(function(tag) { %>
               <% site.tags.findOne({'name': tag.name}).posts.each(function(post) { %>
                 <% if (url_for(post.path) + 'index.html' != url_for(path)){ %>
+                  <% p = 1 %>
                   <li>
                     <% if(theme.thumbnail == true) { %>
                     <div class="item-thumbnail">
@@ -39,6 +28,41 @@
             <% }) %>
           <% } %>
         <% }) %>
+        <% site.posts.sort('date').each(function(post){ %>
+          <% if(post.recommended && url_for(post.path) + 'index.html' != url_for(path)) { %>
+            <% if(page.total || p == 0) { %>
+              <% r = 1 %>
+              <li>
+                <% if(theme.thumbnail == true) { %>
+                <div class="item-thumbnail">
+                  <%- partial('../_partial/post/thumbnail.ejs', {post: post}) %>
+                </div>
+                <% } %>
+                <div class="item-inner">
+                  <p class="item-category"><%- list_categories(post.categories, {show_count: false, depth:2, class: 'article-category', style: 'none', separator: '<i class="fa fa-angle-right"></i>'}) %></p>
+                  <p class="item-title"><a href="<%- url_for((post.link?post.link:post.path)) %>" class="title"><%= post.title %></a></p>
+                  <p class="item-date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
+                </div>
+              </li>
+            <% } %>
+          <% } %>
+        <% }) %>
+        <% if(p == 0 && r == 0) { %>
+          <% site.posts.sort('date', -1).limit(1).each(function(post){ %>
+            <li>
+              <% if(theme.thumbnail == true) { %>
+              <div class="item-thumbnail">
+                <%- partial('../_partial/post/thumbnail.ejs', {post: post}) %>
+              </div>
+              <% } %>
+              <div class="item-inner">
+                <p class="item-category"><%- list_categories(post.categories, {show_count: false, depth:2, class: 'article-category', style: 'none', separator: '<i class="fa fa-angle-right"></i>'}) %></p>
+                <p class="item-title"><a href="<%- url_for((post.link?post.link:post.path)) %>" class="title"><%= post.title %></a></p>
+                <p class="item-date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
+              </div>
+            </li>
+          <% }) %>
+        <% } %>
       </ul>
     </div>
   </div>
