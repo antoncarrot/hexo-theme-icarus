@@ -17,6 +17,7 @@ widget:
   links: 'ссылки'
   tags: 'тэги'
   tag_cloud: 'облако тэгов'
+  recommended: 'рекомендуемые'
 article:
   comments: 'Комментарии'
   share: 'Поделиться'

@@ -17,6 +17,7 @@ widget:
   links: 'links'
   tags: 'tags'
   tag_cloud: 'tag cloud'
+  recommended: 'recommended'
 article:
   comments: 'Comments'
   share: 'Share'
