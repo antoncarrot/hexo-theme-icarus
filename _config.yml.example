@@ -31,7 +31,8 @@ thumbnail: true
 # Contacts
 contacts:
   twitter: http://twitter.com/beardyshow
-  soundcloud: http://soundcloud.com/beardycast
+  #soundcloud: http://soundcloud.com/beardycast
+  paper-plane: http://telegram.me/beardycast
   youtube-play: https://www.youtube.com/user/BeardyCastTV
   vk: http://vk.com/beardycast
   apple: https://itunes.apple.com/ru/podcast/beardycast/id868222886
@@ -41,6 +42,7 @@ contacts:
 links:
   Libsyn: http://directory.libsyn.com/shows/view/id/beardycast
   Теория большой бороды: http://tbbt.beardycast.com
+  Бородатый Telegram чат: http://telegram.me/beardychat
 
 # CDN
 cdn: #If your site loads slowly change it to "google" , because "useso" is slow out of China
