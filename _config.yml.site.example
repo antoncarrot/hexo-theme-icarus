@@ -84,6 +84,9 @@ muut_shortname: beardyshow
 # spot.im
 # spotim_shortname: beardyshow
 
+# hypercomments
+# hypercomments_id: 00000
+
 feed:
   type: atom
   path: atom.xml
