@@ -46,14 +46,18 @@
           <div class="telegram" data-url="<%- post.permalink %>" data-title="<%- post.title %>"></div>
         </div>
         <div>
+          <!--
           <% if (post.comments && config.disqus_shortname || config.duoshuo_shortname || config.muut_shortname || config.cackle_shortname || config.spotim_shortname || config.hypercomments_id){ %>
             <a href="<%- post.permalink %>#comments_thread" class="article-comment-link"><%= __('article.comments') %><% if (config.spotim_shortname){ %> (<span class="spot-im-replies-count" data-post-id="<%= post._id %>"></span>)<% } %></a>
           <% } %>
+          -->
         </div>
       </div>
+      <% if (!index){ %>
       <div style="width: 100%; margin-top: 20px;">
         <%- partial('post/tag') %>
       </div>
+      <% } %>
     </footer>
   </div>
   <% if (!index){ %>
