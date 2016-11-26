@@ -1,5 +1,5 @@
 <article class="archive-article archive-type-<%= post.layout %>">
-  <div class="archive-article-inner">
+  <div class="archive-article-inner" style="display: flex; justify-content: flex-start; align-items: center;">
     <% if(theme.thumbnail == true) { %>
     <div class="archive-article-thumbnail">
       <%- partial('post/thumbnail.ejs', {post: post}) %>
